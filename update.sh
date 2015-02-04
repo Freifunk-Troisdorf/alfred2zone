@@ -1,5 +1,5 @@
 #!/bin/bash
-export LC_ALL=en_US.UTF-8
-cd /home/nils/alfred2zone/
-curl -s http://metameute.de/~freifunk/alfred/nodeinfo.json| /usr/bin/python3 alfred2zone.py > /var/lib/bind/nodes/nodes.ffhl.zone
+export LC_ALL=de_DE.UTF-8
+cd /etc/bind/alfred2zone
+curl -s map.freifunk-troisdorf.de/alfred_merged.json | /usr/bin/python3 alfred2zone.py > /etc/bind/fftdf/db.nodes.fftdf
 /usr/sbin/rndc reload
